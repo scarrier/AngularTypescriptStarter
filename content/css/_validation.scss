@@ -1,0 +1,12 @@
+﻿@import "_colors";
+
+.custom-error-display {
+    padding: 15px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: $color-medium-red;
+    background-color: $color-light-red;
+    border-color: #ebccd1;
+}
+

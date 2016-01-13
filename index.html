@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html ng-strict-di>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <script src="/dist/js/settings.js"></script>
+    <script src="/dist/js/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+<body>
+    <div ng-app="app">
+        <div ng-controller="LoginCtrl">
+            <div ui-view="content"></div>
+        </div>
+    </div>
+</body>
+</html>

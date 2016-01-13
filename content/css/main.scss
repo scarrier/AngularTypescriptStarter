@@ -1,0 +1,46 @@
+﻿@import "_fonts";
+@import "_colors";
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.css');
+@import url('../../node_modules/bootstrap/dist/css/bootstrap-theme.css');
+@import url('spinner.css');
+
+@import url('../../node_modules/toastr/build/toastr.css');
+
+body {
+    /*font-family: 'Segoe UI';*/
+    height: 100%;
+    font-family: $fontStyle-default;
+    font-size: $fontSize-base;
+    line-height: 1.42857;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*h1,h2,h3{
+    font-weight: bold;
+}*/
+h1 {
+    font-size: $fontSize-h1;
+}
+
+h2 {
+    font-size: $fontSize-h2;
+}
+
+h3 {
+    font-size: $fontSize-h3;
+}
+
+@import "_controls";
+@import "_layout";
+@import "_validation";
+@import "_login";
+
+#wrapper{
+    background-color: $color-primary-brand-lightBlue;
+}
+
+.text-left{text-align:left!important}
+.text-center{text-align:center!important}
+

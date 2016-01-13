@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CareConsultWeb</id>
+    <version>1.0.0</version>
+    <title>CareConsultWeb</title>
+    <authors>CenseoHealth</authors>
+    <owners>CenseoHealth</owners>
+    <description>CareConsult Web Site</description>
+</metadata>
+<files>
+  <file src="bin/**/*"/>
+  <file src="dist/**/*"/>
+  <file src="app/**/*.html"/>
+  <file src="Web*.config"/>
+  <file src="favicon.ico"/>
+  <file src="index.html"/>
+</files> 
+</package>

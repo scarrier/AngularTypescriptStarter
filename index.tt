@@ -1,0 +1,49 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".ts" #>
+
+<# 
+    var appPath = this.Host.ResolvePath("./app");
+	var rootPath = this.Host.ResolvePath("") + "\\";
+    var files = Directory.EnumerateFiles(appPath, "*.ts", SearchOption.AllDirectories).Select(file => file.Replace(rootPath, "").Replace('\\', '/'));
+    var models = files.Aggregate(new StringBuilder(), (sb, file) => sb.AppendFormat("/// <reference path='{0}'/>{1}", file, Environment.NewLine));
+    var requires = files.Where(file => !Path.GetDirectoryName(file).Contains("models")).OrderBy(ConvertFileToNumber).Aggregate(new StringBuilder(), (sb, file) => sb.AppendFormat("require('{0}');{1}", file, Environment.NewLine));
+#>
+
+/// <reference path="typings/tsd.d.ts" />
+
+<#= models #>
+interface Window {
+    $: any;
+    jQuery: any;
+    toastr: any;
+    applicationSettings: app.models.Settings;
+}
+
+window.$ = window.jQuery = require('jQuery'); //Hack to get jquery recognized globally
+window.toastr = require('toastr');
+var angular: ng.IAngularStatic = require('angular');
+require('bootstrap');
+require('angular-ui-router');
+require('angular-cookies');
+require('angular-ui-bootstrap');
+require('angular-moment');
+
+<#= requires #>
+
+<#+
+string[] fileOrder = {"module","config","core","directive","service","controller"};
+
+int ConvertFileToNumber(string file)
+{
+    for (int i = 0; i < fileOrder.Length; i++)
+    {
+        if (file.Contains(fileOrder[i]))
+            return i;
+    }
+    return fileOrder.Length;
+}
+#>

@@ -194,3 +194,10 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+**/*.js
+**/*.js.map
+!gulpfile.js
+!karma.config.js
+!protractor.config.js
+!gulp.config.js

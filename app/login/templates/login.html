@@ -1,0 +1,45 @@
+﻿<div id="login-container">
+    <form name="loginForm" id="login" novalidate ng-submit="vm.login(loginForm)">
+        <div class="row" ng-show="vm.displaySpinner">
+            <div class="col-md-12" align="center">
+                <div class="loading">
+                    Loading…
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-170">
+            <div class="col-md-3 col-md-offset-5">
+               <img id="censeohealth-logo" src="./dist/images/CHLogo.png" alt="CenseoHealth">
+            </div>
+        </div>
+        <div class="row margin-top-40">
+            <div class="col-md-3 col-md-offset-5">
+                <input id="username" placeholder="Username (NPI)" type="text" class="form-control required" ng-keypress="vm.showInvalidUserMessage = false" autocomplete="off" ng-required="true" ng-minlength="4" ng-model="vm.userName" />
+            </div>
+        </div>
+        <div class="row margin-top-25">
+            <div class="col-md-3 col-md-offset-5">
+                <input id="password" placeholder="Password" type="password" class="form-control required" ng-keypress="vm.showInvalidUserMessage = false" autocomplete="off" ng-required="true" ng-minlength="2" ng-model="vm.password" />
+            </div>
+        </div>
+        <div class="row margin-top-25" ng-show="vm.showInvalidUserMessage" id="errorContainer">
+            <div class="col-md-3 col-md-offset-5">
+                <div class="width-340 custom-error-display" id="errorMessage"> 
+                    Sorry we don't recognize the user ID or password you entered, please try again
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-25">
+            <div class="col-md-3 col-md-offset-5">
+                <input type="submit" id="loginButton" class="btn btn-login" value="Login" ng-disabled="loginForm.$invalid" />
+            </div>
+        </div>
+        <div class="row margin-top-10">
+            <div class="col-md-3 col-md-offset-5">
+                <a>Forgot Password</a>
+                <a ui-sref="app.contactSupport" class="margin-left-130">Contact Support</a>
+            </div>
+        </div>
+    </form>
+</div>
+<footer></footer>

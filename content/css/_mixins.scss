@@ -1,0 +1,26 @@
+﻿@import "colors";
+
+@mixin shadow-button() {
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+@mixin shadow-container($size: 3px) {
+    -webkit-box-shadow: $size $size $size $size rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: $size $size $size $size rgba(0, 0, 0, 0.2);
+    box-shadow: $size $size $size $size rgba(0, 0, 0, 0.2);
+}
+
+@mixin all-border-radius($size: 5px) {
+    -webkit-border-radius: $size $size $size $size;
+    -moz-border-radius: $size $size $size $size;
+    border-radius: $size $size $size $size;
+}
+
+@mixin button-secondary-action() {
+    @include shadow-button();
+    color: $color-white;
+    background-color: #dd9a4a;
+    border-color: #eea236;
+}

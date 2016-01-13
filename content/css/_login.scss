@@ -1,0 +1,45 @@
+﻿@import "_colors";
+
+#login-container:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.07;
+    background: url('../images/LoginScreen.jpeg') no-repeat center center fixed;
+     /* This is what makes the background image rescale based
+     on the container's size */
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 100% 100%;
+}
+
+#censeohealth-logo {
+    margin-left: 40px;
+
+}
+
+// The underline
+// http://callmenick.com/post/various-css-input-text-styles
+//
+#username, #password {  
+  font-size: 15px;
+  font-weight: bold;
+  background: transparent;
+  padding: 10px;
+  color: $color-medium-grey;
+  // reset all borders
+  border: none;
+  // apply only a bottom border
+  border-bottom: solid 2px $color-medium-grey;
+   //transition the colour to a darker one on focus
+  transition: border 0.3s;
+  font-style: italic;
+  width: 340px;
+}

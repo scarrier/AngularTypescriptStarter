@@ -1,0 +1,86 @@
+﻿@import "_colors";
+@import "_fonts";
+@import "_mixins";
+
+
+/*.btn-secondary-action {
+    background-color: $color-secondary-action;
+    color: $color-white;
+    @include shadow-button();
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white;
+        background-color: lighten($color-secondary-action, 5%);
+    }
+}*/
+
+
+.btn-login {
+    width: 340px;
+    background: transparent;
+    height: 48px;
+    font-size: 15px;
+   
+
+    &:disabled
+    {
+        border: 2px solid $color-medium-grey;
+        color: $color-medium-grey;
+    }  
+
+    &:enabled
+    {
+        // opacify($color-blue, .73);
+        color: rgba(4,105,178,.73);
+        background-color: rgba(4,105,178,.13);    
+        border: 2px solid rgba(4,105,178,.43); 
+    }  
+}
+
+a {
+    color: $color-orange;
+}
+
+/*.btn-orange-action {
+    width: 150px;
+    background-color: $color-dark-orange;
+    color: $color-white;
+    &:disabled,
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white;
+        background-color: darken($color-dark-orange, 5%);
+    }
+}
+
+.btn-login {
+    @extend .btn-secondary-action;
+    width: 100%;
+}
+
+
+.btn-cancel {
+    background-color: $color-gray;
+    color: $color-main;
+    @include shadow-button();
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: lighten($color-gray, 5%);
+    }
+}*/
+
+/*a {
+    color: lighten(@color-main, 10%);
+    
+    &:visited,
+    &:active,
+    &:hover {
+        color: lighten(@color-main, 10%);
+        text-decoration: underline;
+    }
+}*/
