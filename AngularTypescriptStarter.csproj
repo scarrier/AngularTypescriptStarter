@@ -27,7 +27,7 @@
     <Content Include="app\login\templates\footer.html" />
     <Content Include="app\login\templates\login.html" />
     <Content Include="content\css\spinner.css" />
-    <Content Include="content\images\CareConsult_LoginScreen_Asset.jpeg" />
+    <Content Include="content\images\LoginScreen.jpeg" />
     <Content Include="content\images\CHLogo.png" />
     <Content Include="content\images\logo.png" />
     <Content Include="favicon.ico" />

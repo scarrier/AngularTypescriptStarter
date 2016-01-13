@@ -201,3 +201,8 @@ FakesAssemblies/
 !karma.config.js
 !protractor.config.js
 !gulp.config.js
+!settings.js
+
+./content/css/main.css
+./content/css/main.css.map
+./dist/
